@@ -13,7 +13,9 @@ const cors = require('cors')
 
 
 //middleware
-app.use(cors());
+app.use(cors({
+     origin: 'https://wegoagain-contactfront.vercel.app'
+}));
 app.use(express.urlencoded({extended:true}));
 app.use(express.json());
 app.use('/contact', contactRouter)
